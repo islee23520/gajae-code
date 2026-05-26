@@ -1,11 +1,12 @@
 import { Command } from "@gajae-code/utils/cli";
+import { runBridgedRuntimeEndpoint } from "./gjc-runtime-bridge";
 
-export default class PendingGjcRuntimeCommand extends Command {
-	static description = "Gajae Code runtime endpoint (implementation pending)";
-	static examples: string[] = [];
+export default class Question extends Command {
+	static description = "Ask a blocking private runtime question through the gjc/OMX bridge";
+	static strict = false;
+	static examples = ["$ gjc question --input '<json>' --json"];
 
 	async run(): Promise<void> {
-		process.stderr.write("This gjc runtime endpoint is not implemented in this migration slice yet.\n");
-		process.exitCode = 1;
+		await runBridgedRuntimeEndpoint("question", this.argv);
 	}
 }
