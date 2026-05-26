@@ -83,15 +83,15 @@ import { type FileSlashCommand, loadSlashCommands as loadSlashCommandsInternal }
 import type { HindsightSessionState } from "./hindsight/state";
 import { LocalProtocolHandler, type LocalProtocolOptions } from "./internal-urls";
 import { LSP_STARTUP_EVENT_CHANNEL, type LspStartupEvent } from "./lsp/startup-events";
+import { resolveMemoryBackend } from "./memory-backend";
+import asyncResultTemplate from "./prompts/tools/async-result.md" with { type: "text" };
+import { AgentRegistry, MAIN_AGENT_ID } from "./registry/agent-registry";
 import { discoverAndLoadMCPTools, MCPManager, type MCPToolsLoadResult } from "./runtime-mcp";
 import {
 	collectDiscoverableMCPTools,
 	formatDiscoverableMCPToolServerSummary,
 	selectDiscoverableMCPToolNamesByServer,
 } from "./runtime-mcp/discoverable-tool-metadata";
-import { resolveMemoryBackend } from "./memory-backend";
-import asyncResultTemplate from "./prompts/tools/async-result.md" with { type: "text" };
-import { AgentRegistry, MAIN_AGENT_ID } from "./registry/agent-registry";
 import {
 	collectEnvSecrets,
 	deobfuscateSessionContext,
