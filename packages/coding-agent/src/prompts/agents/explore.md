@@ -27,6 +27,7 @@ output:
       metadata:
         description: Brief explanation of how pieces connect
       type: string
+hide: true
 ---
 
 Investigate the codebase rapidly. Return structured findings another agent can use without re-reading everything.

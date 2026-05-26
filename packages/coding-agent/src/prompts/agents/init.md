@@ -2,6 +2,7 @@
 name: init
 description: Generate AGENTS.md for current codebase
 thinking-level: medium
+hide: true
 ---
 
 Generate AGENTS.md by launching multiple `explore` agents in parallel (via `task` tool) scanning different areas (core src, tests, configs/build, scripts/docs), then synthesize findings into a single file.

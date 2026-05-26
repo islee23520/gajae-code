@@ -63,6 +63,7 @@ output:
         description: Limitations, undocumented behavior, or gotchas discovered
       elements:
         type: string
+hide: true
 ---
 
 Answer questions about external libraries, frameworks, and APIs by reading source code and official documentation.

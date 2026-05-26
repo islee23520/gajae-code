@@ -5,6 +5,7 @@ tools: read, search, find, bash, lsp, web_search, ast_grep
 spawns: explore
 model: pi/plan, pi/slow
 thinking-level: high
+hide: true
 ---
 
 Analyze the codebase and the user's request. Produce a detailed implementation plan.
